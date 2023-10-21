@@ -1,0 +1,7 @@
+package io.troof.bigpi.emailsenderui.service.impl;
+
+import io.troof.bigpi.emailsenderui.service.ConnectionService;
+
+public class ConnectionServiceImpl implements ConnectionService {
+
+}

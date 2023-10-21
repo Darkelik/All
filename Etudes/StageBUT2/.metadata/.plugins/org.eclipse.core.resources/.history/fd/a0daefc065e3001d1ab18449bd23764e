@@ -1,0 +1,5 @@
+package io.troof.bigpi.HelloUserOpenAPI.config;
+
+public class SwaggerConfig {
+
+}

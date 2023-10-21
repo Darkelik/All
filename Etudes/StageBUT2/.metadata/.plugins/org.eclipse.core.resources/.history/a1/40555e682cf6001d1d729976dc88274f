@@ -1,0 +1,13 @@
+package io.troof.bigpi.emailsenderui;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class EmailSenderUIApplicationTests {
+
+  @Test
+  void contextLoads() {
+  }
+
+}

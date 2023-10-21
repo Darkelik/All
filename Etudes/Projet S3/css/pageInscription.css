@@ -1,0 +1,70 @@
+.box2{
+    width: 300px;
+    padding: 40px;
+    position: relative;
+    top: 600px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: white;
+    text-align: center;
+	margin-bottom:125px;
+	margin-top:125px;
+}
+.box2 h1{
+	top:-5px;
+    color: #63003c;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.box2 h3{
+    color: #63003c;
+}
+.box2 input[type = "text"], .box2 input[type = "password"], .box2 input[type = "date"], .box2 input[type = "mail"] {
+    border:0 ;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #63003c;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+	background: white;
+}
+
+.box2 input[type = "text"]:focus, .box2 input[type = "password"]:focus, .box2 input[type = "date"]:focus, .box2 input[type = "mail"]:focus{
+    width: 245px;
+	margin: auto;
+    border-color: #63003c;
+
+}
+
+.box2 input[type = "submit"]{
+    border:0 ;
+    background: #63003c;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transform: 0.25s;
+    cursor: pointer;
+   
+}
+.box2 input[type = "submit"]:hover{
+    background: #2ecc71;
+    
+}
+
+.preference {display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 0.5rem;
+	display:inline;
+}

@@ -1,0 +1,65 @@
+  <div class="container">
+
+ <div class="row1">
+    <div class="square" id="p4" onclick="window.location.href='../puissance4'"></div>
+    <div class="square" id="snake" onclick="window.location.href='../snake'"></div>
+    <div class="square" id="doodlejump" onclick="window.location.href='../DoodleJump'"></div>
+    <div class="square" id="memory"onclick="window.location.href='../memory'"></div>
+  </div>
+  <div class="row2">
+    <div class="square" id="jeudetir" onclick="window.location.href='../JeuDeTir'"></div>
+    <div class="square" id="tictactoe" onclick="window.location.href='../TicTacToe'"></div>
+    <div class="square" id="sudoku" onclick="window.location.href='../sudoku'"></div>
+    <div class="square" id="enconstruction"></div>
+  </div>
+
+</div>
+<h2 id="titreJeu" style="text-align:center; color:gray;">Bienvenue sur Mini-Jeux-Party!</h2>
+<p id="descJeu" style="text-align:center; color:gray;">Passez la souris sur un jeu pour voir sa description.</p>
+
+<script>
+	$('#p4').hover(function(){
+		$('#titreJeu').text("Puissance 4");
+		$('#descJeu').text("Alignez 4 jetons de la même couleur avant votre advesaire!");
+	});
+	
+	$('#snake').hover(function(){
+		$('#titreJeu').text("Snake");
+		$('#descJeu').text("Mangez les pommes et évitez de vous cogner contre les murs ou vous-même!");
+	});
+	
+	$('#doodlejump').hover(function(){
+		$('#titreJeu').text("Doodle Jump");
+		$('#descJeu').text("Sautez le plus haut possible sans tomber!");
+	});
+	
+	$('#memory').hover(function(){
+		$('#titreJeu').text("Memory");
+		$('#descJeu').text("Trouvez chaque paire de couleur avant la fin du chrono!");
+	});
+	
+	$('#jeudetir').hover(function(){
+		$('#titreJeu').text("Jeu de tir");
+		$('#descJeu').text("Eliminez les monstres avant qu'ils ne s'enragent!");
+	});
+	
+	$('#tictactoe').hover(function(){
+		$('#titreJeu').text("Tic Tac Toe");
+		$('#descJeu').text("Alignez 3 symboles avant votre adversaire!");
+	});
+	
+	$('#sudoku').hover(function(){
+		$('#titreJeu').text("Sudoku");
+		$('#descJeu').text("Complétez une grille de Sudoku!");
+	});
+	
+	$('#enconstruction').hover(function(){
+		$('#titreJeu').text("(en construction)");
+		$('#descJeu').text("Ce jeu est en travaux. Revenez plus tard!");
+	});
+	
+	$('.square').mouseleave(function(){
+		$('#titreJeu').text("Bienvenue sur Mini-Jeux-Party!");
+		$('#descJeu').text("Passez la souris sur un jeu pour voir sa description.");
+	});
+</script>

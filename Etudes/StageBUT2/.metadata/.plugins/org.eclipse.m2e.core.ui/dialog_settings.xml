@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\frede\OneDrive\Bureau\stage\email-sender-ui"/>
+			<item value="C:\Users\frede\OneDrive\Bureau\spring-server-generated"/>
+			<item value="C:\Users\frede\OneDrive\Bureau\stage\email-sender-implementation"/>
+			<item value="C:\Users\frede\OneDrive\Bureau\stage\spring-boot-example"/>
+			<item value="C:\Users\frede\OneDrive\Bureau\stage\email-sender-database"/>
+			<item value="C:\Users\frede\OneDrive\Bureau\stage\email-sender-remake"/>
+			<item value="C:\Users\frede\OneDrive\Bureau\stage\studentCrud"/>
+			<item value="C:\Users\frede\OneDrive\Bureau\stage\email-sender-registration"/>
+			<item value="C:\Users\frede\OneDrive\Bureau\stage\email-sender"/>
+			<item value="C:\Users\frede\OneDrive\Bureau\stage\Hello-User"/>
+			<item value="C:\Users\frede\OneDrive\Bureau\stage\boot-swagger-hellouser"/>
+			<item value="C:\Users\frede\OneDrive\Bureau\stage\boot-swagger-source"/>
+			<item value="C:\Users\frede\OneDrive\Bureau\stage\HelloUserOpenAPI"/>
+			<item value="C:\Users\frede\OneDrive\Bureau\stage\OpenAPI"/>
+			<item value="C:\Users\frede\OneDrive\Bureau\stage\Exo1"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\frede\OneDrive\Bureau\stage\hello-user"/>
+			<item value="C:\Users\frede\OneDrive\Bureau\stage\HelloUserOpenAPI"/>
+			<item value="C:\Users\frede\OneDrive\Bureau\stage\helloworld"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="io.troof.bigpi"/>
+			<item value="com.javainuse"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="mail-sender"/>
+			<item value="user-test"/>
+			<item value="hello-user"/>
+			<item value="boot-swagger"/>
+			<item value="Exo1"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>
