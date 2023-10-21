@@ -1,0 +1,5 @@
+package com.codacum.springboothelloworld.controller;
+
+public class HelloController {
+
+}

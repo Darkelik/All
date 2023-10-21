@@ -1,0 +1,5 @@
+package io.troof.bigpi.emailsenderui.resource;
+
+public class AutoEmail {
+
+}

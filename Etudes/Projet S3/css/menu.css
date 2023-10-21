@@ -1,0 +1,349 @@
+
+
+
+  .wrapper {
+    display: grid;
+    
+    grid-template-columns: 100px  150px  185px  100px  120px  550px 180px;
+	grid-template-rows: 100px  100px ;
+    grid-template-areas:
+               "logo logo logo adm  docum  ...  compte"
+               "accueil documents cdc contact propo ... recherche";
+			   background-color:#63003c;
+  }
+  
+/* Logo */
+
+.logo {
+    grid-area: logo;
+  }
+  
+
+  
+img.img {
+    width: 268px;
+    height: auto;
+    position: absolute;
+    top: 2%;
+    left: 120px;
+}
+
+/* Compte */
+
+.compte {
+    grid-area: compte;
+  }
+  
+  .menuDeroulantCompte{
+   list-style-type:none;
+   margin-top:10px;
+}
+  
+.menuDeroulantCompte > a::after{
+    content:" ▼";
+    font-size:9px;
+}
+
+.monCompte {
+	margin-top:30px;
+    margin-left:30%;
+	padding:3%;
+	color:white;
+	border:2px solid;
+	border-color:white;
+	border-radius:24px;
+	text-decoration:none;
+}
+
+.menuDeroulantCompte .sous a {
+    color: #63003c;
+	background-color:white;
+    padding: 4px 4px;
+    text-decoration: none;
+    display: block;
+	border-radius:24px;
+}
+
+.menuDeroulantCompte .sous a:hover {
+    background-color: #f1f1f1;
+}
+
+.menuDeroulantCompte:hover .sous {
+    display: block;
+}
+
+.menuDeroulantCompte .sous {
+	display:none;
+	width:100%;
+	margin-top:10px;
+	padding:0;
+	margin-left:8%;
+	box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.3);
+	border-radius:24px;
+	border: solid 2px;
+	border-color: white;
+	list-style-type:none;
+}
+
+
+.sous a{
+	margin:3px;
+	padding:3px;
+   text-decoration:none;
+   color: white;
+}
+
+.sous a:hover{
+    background-color:rgba(200,200,200,0.1);
+    color:black;
+}
+
+a.deco {
+	border:none; 
+}
+
+
+
+
+/*
+.sous:hover {
+		display:block;
+}*/
+
+/* Accueil */
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0 50px 0 50px;
+  margin-left:-4%;
+  margin-top:8%;
+}
+
+ .accueil {
+  margin: 0 5px;
+  grid-area: accueil;
+  }
+
+.li_ac{
+	  list-style-type:none;
+  }
+  
+  .ac  {text-decoration:none;
+   color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border: 2px solid;
+  border-radius: 24px;
+  border-color: white;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  list-style-type:none;
+  left:50%;
+  }
+  
+  /* Documents */ 
+  
+   .documents {
+    grid-area: documents;
+  }
+  
+ .li_doc{
+	  list-style-type:none;
+  }
+  
+  .doc  {text-decoration:none;
+   color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border: 2px solid;
+  border-radius: 24px;
+  border-color: white;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  list-style-type:none;
+  }
+  /* Coups de coeurs */
+  
+   .cdc {
+    grid-area: cdc;
+  }
+  
+   .li_ncdc{
+	  list-style-type:none;
+  }
+  
+  .ncdc  {text-decoration:none;
+   color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border: 2px solid;
+  border-radius: 24px;
+  border-color: white;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  list-style-type:none;
+  }
+  
+  /* Contact */
+   .contact {
+    grid-area: contact;
+  }
+  
+  .li_co{
+	  list-style-type:none;
+  }
+  
+  .co  {text-decoration:none;
+   color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border: 2px solid;
+  border-radius: 24px;
+  border-color: white;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  list-style-type:none;
+  }
+  
+  /* A Propos */
+  
+   .propo {
+    grid-area: propo;
+  }
+  
+   .li_prop{
+	  list-style-type:none;
+  }
+  
+  .prop  {text-decoration:none;
+   color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border: 2px solid;
+  border-radius: 24px;
+  border-color: white;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  list-style-type:none;
+  }
+  
+  /* Administrateur */
+  
+  .adm {
+    grid-area: adm;
+  }
+  
+   .li_admin{
+	  list-style-type:none;
+	  margin-top:18%; 
+	  margin-left:49%;
+  }
+  
+  .admin  {text-decoration:none;
+   color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border: 2px solid;
+  border-radius: 24px;
+  border-color: white;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  list-style-type:none;
+  }
+  
+  /* Documentaliste */
+  
+  .docum {
+    grid-area: docum;
+  }
+  
+   .li_docu{
+	  list-style-type:none;
+	  margin-top:15%;
+	  margin-right:100%;
+  }
+  
+  .docu  {text-decoration:none;
+   color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border: 2px solid;
+  border-radius: 24px;
+  border-color: white;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  list-style-type:none;
+  }
+  
+  
+  
+  /* Recherche */
+  
+   .recherche {
+    grid-area: recherche;
+
+  }
+  
+	#searchbar{
+     
+   }
+   
+
+
+.boxr {
+ 
+    border-radius: 5px;
+    font-size: 150%;
+   
+}
+
+#search {
+	 font-size:14px;
+     width: 100%;
+     padding: 8px 15px;
+     border: 4px solid;
+     border-radius: 8px;
+     border-color: white;
+	 list-style-type:none;
+}
+
+#btnRechercher {
+	color:#63003c;
+	border:4px solid;
+	border-color:white;
+	border-radius:24px;
+	background-color:white;
+	text-align:center;
+	margin-left:35%;
+	
+}
+
+.pageActuelle {text-decoration:none;
+   color: #c60B46;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border: 2px solid;
+  border-radius: 24px;
+  border-color: #c60B46;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  list-style-type:none;
+  }

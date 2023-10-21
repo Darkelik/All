@@ -1,0 +1,610 @@
+body {
+	height: 100%;
+	background: linear-gradient(#ffc3f4, #ffffff);
+}
+
+h1{
+	text-align: center;
+	color: white;
+	-webkit-text-stroke: 2px;
+	-webkit-text-stroke-color: gray;
+}
+
+h1, h2 {font-family: "Source Sans Pro", sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#mode{
+	color: gray;
+	display: inline-block;
+	margin-left: 5%;
+}
+
+#mode:hover {
+        transform: scale(1.1);
+        transition-duration: .5s;
+      }
+
+
+#monCompte{
+	color: gray;
+	float: right;
+	display: inline-block;
+	margin-right: 5%;
+}
+
+#monCompte:hover {
+        transform: scale(1.1);
+        transition-duration: .5s;
+      }
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+
+.row1 {
+  display: flex;
+  justify-content: center;
+  margin-top: -7%;
+}
+
+.row2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* Ajuster la marge selon les besoins */
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.square:hover {
+        transform: scale(1.1);
+        transition-duration: .5s;
+      }
+
+#p4 {
+background-image: url("../images/logoPuissance4.jpg");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+#snake{
+background-image: url("../images/snake.jpg");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+#doodlejump{
+background-image: url("../images/doodlejump.jpg");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+#memory{
+background-image: url("../images/memory-games.jpg");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+#jeudetir{
+background-image: url("../images/jeutir.jpg");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+#tictactoe{
+background-image: url("../images/tictactoe.png");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
+	
+	
+#sudoku{
+background-image: url("../images/sudoku.jpg");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+#enconstruction{
+background-image: url("../images/travaux.jpg");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.square{
+	cursor:pointer;
+}
+
+button{
+	cursor:pointer;
+}
+
+#mode{
+	cursor:pointer;
+}
+	
+.bjrX {
+	text-decoration:underline;
+}   
+
+.infos {
+	text-align:center;
+	list-style-type:none;
+}
+
+.information{
+	list-style-type::none;
+}
+
+#rev {
+	font-size: 1em;
+	padding: 5px;
+	border-radius: 24px;
+	margin: auto;
+}
+
+#deco {
+ font-size: 1em;
+	padding: 5px;
+	border-radius: 24px;
+	margin: auto;
+}
+
+main {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+    main * {
+        letter-spacing: 0.4px;
+        word-spacing: 1px;
+        color: rgb(77, 77, 77);
+    }
+
+    main h2 {
+        font-size: 38px;
+        text-transform: capitalize;
+        margin-bottom: 40px;
+        width: max-content;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        padding-top: 80px;
+    }
+
+    main p {
+        line-height: 23px;
+        font-size: 15px;
+    }
+
+#team {
+    width: 100%;
+}
+
+form {
+    box-shadow: 0 0 10px rgb(202, 202, 202);
+    background-color: white;
+    padding: 50px;
+    width: 70%;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+    form .placeholder-left, form .placeholder-right {
+        width: calc(50% - 30px);
+        margin-bottom: 17px;
+        border-bottom: #353535 solid 2px;
+    }
+
+    form .placeholder-left {
+        float: left;
+    }
+
+    form .placeholder-right {
+        float: right;
+    }
+
+    form input {
+        font-size: 15px;
+        font-weight: lighter;
+        letter-spacing: 0.6px;
+        padding: 17px;
+        padding-left: 10px;
+        padding-bottom: 12px;
+        width: calc(100% - 27px);
+    }
+
+    form .scrolling-menu {
+        border-bottom: #353535 solid 2px;
+        margin-bottom: 17px;
+    }
+
+    form select {
+        font-size: 15px;
+        font-weight: lighter;
+        padding: 17px;
+        padding-left: 10px;
+        padding-bottom: 12px;
+        width: 100%;
+    }
+
+    form .text-area {
+        border-bottom: #353535 solid 2px;
+        margin-bottom: 17px;
+        height: 125px;
+    }
+
+    form textarea {
+        font-size: 15px;
+        font-weight: lighter;
+        font-style: oblique;
+        width: 100%;
+        height: calc(100% - 14px);
+        padding: 7px;
+    }
+
+    form .button {
+        text-align: initial;
+    }
+
+    form button {
+        color: rgb(77, 77, 77);
+        font-size: 25px;
+        padding: 15px 50px;
+    }
+
+#gameCanvas {
+			display: block;
+            margin: auto;
+			border: 1px solid #000;
+			margin-bottom:8.9%;
+			border-radius:24px;
+}
+
+#restartButton {
+	font-size: 1em;
+	padding: 12px;
+	border-radius: 24px;
+	margin:auto;
+	margin-top:-8%;
+	margin-bottom:5.2%;
+}
+
+footer {
+	position:relative;
+	width:100%;
+	height:100%;
+}
+
+img{
+	width: 268px;
+	height: auto;
+	position: absolute;
+	top: 80px;
+	left: 320px;
+}
+
+
+img.instagram_logo {
+position: relative;
+top: -7px;
+width: 4%;
+height: 35%;
+}
+
+
+img.twitter_logo {
+	position: relative;
+	top: -7px;
+width: 4%;
+height: 35%;
+}
+
+img.linkedin_logo {
+	position: relative;
+	top: -7px;
+width: 4%;
+height: 35%;
+}
+img.youtube_logo {
+	position: relative;
+	top: -7px;
+width: 4%;
+height: 35%;
+}
+
+.credits {font-size: 18px;
+color: white;
+border-style: solid;
+background-color: #56003d;
+width: 100%;
+height: 20%;
+text-align: center;
+font-family:serif;
+}
+
+.gestion {
+	text-align: center;
+	font-size: 12px;
+	color: darkgray;
+	padding: 10px;
+}
+
+.logos{
+	margin-right:40%;
+}
+
+#game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+div#terrain_de_jeu {
+  position: relative;
+  height: 90%;
+  width: 90%;
+  border: 1px solid black;
+  margin-bottom:5%;
+}
+
+#restartButtonTir {
+	font-size: 1em;
+	padding: 12px;
+	border-radius: 24px;
+	margin: auto;
+	margin-bottom: auto;
+	margin-top: -6%;
+	margin-bottom: 5.2%;
+}
+
+#game {
+            display: block;
+            margin: auto;
+			border: 1px solid #000;
+			margin-bottom:7.7%;
+			border-radius:24px;
+        }
+
+#b2{
+	font-size: 1em;
+	padding: 12px;
+	border-radius: 24px;
+	margin: auto;
+	margin-top: -6%;
+	margin-bottom: 5.2%;
+	margin-left:50%;
+}	
+
+#times {
+    text-align:center;
+}
+
+#scores {
+    text-align: center;
+}
+
+main {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+    main * {
+        letter-spacing: 0.4px;
+        word-spacing: 1px;
+        color: rgb(77, 77, 77);
+    }
+
+    main h2 {
+        font-size: 38px;
+        text-transform: capitalize;
+        margin-bottom: 40px;
+        width: max-content;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        padding-top: 80px;
+    }
+
+    main p {
+        line-height: 23px;
+        font-size: 15px;
+    }
+
+#team {
+    width: 100%;
+}
+
+form {
+    box-shadow: 0 0 10px rgb(202, 202, 202);
+    background-color: white;
+    padding: 50px;
+    width: 70%;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+    form .placeholder-left, form .placeholder-right {
+        width: calc(50% - 30px);
+        margin-bottom: 17px;
+        border-bottom: #353535 solid 2px;
+    }
+
+    form .placeholder-left {
+        float: left;
+    }
+
+    form .placeholder-right {
+        float: right;
+    }
+
+    form input {
+        font-size: 15px;
+        font-weight: lighter;
+        letter-spacing: 0.6px;
+        padding: 17px;
+        padding-left: 10px;
+        padding-bottom: 12px;
+        width: calc(100% - 27px);
+    }
+
+    form .scrolling-menu {
+        border-bottom: #353535 solid 2px;
+        margin-bottom: 17px;
+    }
+
+    form select {
+        font-size: 15px;
+        font-weight: lighter;
+        padding: 17px;
+        padding-left: 10px;
+        padding-bottom: 12px;
+        width: 100%;
+    }
+
+    form .text-area {
+        border-bottom: #353535 solid 2px;
+        margin-bottom: 17px;
+        height: 125px;
+    }
+
+    form textarea {
+        font-size: 15px;
+        font-weight: lighter;
+        font-style: oblique;
+        width: 100%;
+        height: calc(100% - 14px);
+        padding: 7px;
+    }
+
+    form .button {
+        text-align: initial;
+    }
+
+    form button {
+        color: rgb(77, 77, 77);
+        font-size: 25px;
+        padding: 15px 50px;
+    }
+
+#plateau table {
+    border: 3px blue outset;
+	border-radius:24px;
+    background-color: blue;
+	margin:auto;
+	margin-bottom:6.1%;
+}
+#plateau td {
+    width: 2cm;
+    height: 2cm;
+    margin: 0px;
+    padding: 0px;
+    border: 2px blue inset;
+    border-radius: 2cm;
+    background-color: white;
+    cursor: pointer;
+	margin-bottom: 17%;
+}
+#plateau td.joueur1 {
+    background-color: red;
+}
+#plateau td.joueur2 {
+    background-color: yellow;
+}
+#info {
+	text-align:center;
+}
+#reset {
+	font-size: 1em;
+	padding: 12px;
+	border-radius: 24px;
+	margin: auto;
+	margin-bottom: 5.2%;
+	display:block;
+}
+
+#game {
+            display: block;
+            margin: auto;
+			border: 1px solid #000;
+			margin-bottom:7.7%;
+			border-radius:24px;
+        }
+		
+
+#restartButtonSnake {
+font-size: 1em;
+padding: 12px;
+border-radius: 24px;
+margin: auto;
+margin-bottom: auto;
+margin-top: -6%;
+margin-bottom: 5.2%;
+}
+
+
+
+.game {
+  flex-direction: column;
+  border: 3px solid #000;
+  border-radius: 5px;
+  width: 300px;
+  height: 300px;
+  margin:auto;
+  margin-bottom:22%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+#titreJeu{
+    margin-top: -7%;
+}
+
+#descJeu{
+    margin-bottom: 10%;
+}

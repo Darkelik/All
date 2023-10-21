@@ -1,0 +1,1024 @@
+@font-face{
+	font-family: 'ExcellenceInMotionV-Bold';
+	src: url('ExcellenceInMotionV-Bold.otf');
+}
+
+img{
+	width: 268px;
+	height: auto;
+	position: absolute;
+	top: 80px;
+	left: 320px;
+}
+
+h1{color:  #D40504;
+text-decoration: underline;
+font-size: 55px;
+text-align: right;
+font-family:"ExcellenceInMotionV-Bold";
+margin: 2em;
+padding: 30px;
+float: right;
+top: 22px;
+position: absolute;
+right: 150px;
+z-index: 3;
+}
+
+h1:hover {
+	animation-duration: 2s;
+	animation-name:rainbow;
+	animation-iteration-count: infinite;
+}
+
+@keyframes rainbow{
+	0% {color: red}
+	10% {color: orange}
+	20% {color: yellow}
+	30% {color: lime}
+	40% {color: green}
+	50% {color: cyan}
+	60% {color: navy}
+	70% {color: purple}
+	80% {color: pink}
+	90% {color: brown}
+	100% {color: black}
+}
+
+p.introduction {
+	border-style: solid;
+	border-radius: 12px;
+	border-color: lightgray;
+	padding: 20px;
+	margin: 5px;
+
+}
+
+h2{
+font-size: 28px;
+color: #D40504;
+font-family: Bradley Hand, cursive;
+text-decoration: underline;
+}
+
+h3{font-style: italic;
+color:darkgoldenrod;
+text-decoration: underline;
+font-family: "Brush Script MT", cursive;}
+
+h4{font-family: "ExcellenceInMotionV-Bold";
+color: darkgoldenrod;
+text-decoration: underline;}
+
+h5{text-align: center;}
+
+h6{font-family: "ExcellenceInMotionV-Bold";
+color: darkgoldenrod;
+text-decoration: underline;
+font-size: 18px;
+text-align: center}
+
+ 
+
+body{background:white;
+background-size: cover;
+font-family: "ExcellenceInMotionV-Bold";
+color:  #051039;
+font-size: 23px;}
+
+.p{
+border-style: solid;
+border-radius: 16px;
+background: white;
+text-align: center;
+border-color: lightgray;
+padding: 20px;}
+
+.pc{
+border-style: solid;
+border-radius: 16px;
+background: white;
+text-align: center;
+border-color: lightgray;
+padding: 20px;
+margin-bottom: 50px;
+}
+
+.p2{
+	text-align: center;
+}
+
+.p8{
+	text-align: center;
+}
+
+.titre_cours {text-align: center;}
+
+nav{
+	background-color: white;
+	border: solid;
+	display: block;
+	position: fixed;
+	border-radius: 10px;
+    border-width: 3px;
+   opacity: 0.65;
+    z-index: 4;
+    width: 99%;
+}
+
+
+a.link {
+	text-decoration: none;
+	color: lightslategray;
+	margin: 20px;
+}
+
+a.link2 {
+	text-decoration: none;
+	color: lightslategray;
+	margin: 20px;
+}
+
+a.link:hover {
+	text-decoration: none;
+	color: white;
+	background-color: #051039;
+	transition: 0.7s;
+}
+
+nav:hover {
+	opacity: 1;
+	transition: 0.5s;
+	background-color: #051039;
+}
+
+
+img.instagram_logo {
+position: relative;
+top: -7px;
+left: -20%;
+width: 4%;
+height: 2%;
+}
+
+
+img.twitter_logo {
+	position: relative;
+	top: -7px;
+	left: -18%;
+width: 4%;
+height: 2%;
+}
+
+img.linkedin_logo {
+	position: relative;
+	top: -7px;
+	left: -3%;
+width: 4%;
+height: 3%;
+}
+img.youtube_logo {
+	position: relative;
+	top: -7px;
+	left: 0%;
+width: 4%;
+height: 2%;
+}
+img.trait_gris {
+	transform: rotate(90deg);
+	position: absolute;
+	left: calc(48% - 300px);
+	top: 180px;
+	width: 600px;
+	height: auto;
+	z-index: 0;
+}
+
+img.appstore_logo{
+	position: relative;
+	top: -145px;
+	left: -28%;
+height: 11.5%;
+width: 11.5%;
+}
+
+img.googleplay_logo{
+	position: relative;
+	top: -130px;
+	left: -25%;
+height: 10%;
+width: 10%;
+}
+
+h4.Appm
+{
+	text-align: left;
+	padding-left: 2%;
+	font-size: 40px;
+}
+
+.turboreacteur{
+	-webkit-animation: spin 10s linear infinite;
+    -moz-animation: spin 10s linear infinite;
+    animation: spin 10s linear infinite;
+    z-index: 1;
+    position: absolute;
+    top: 120px;
+}
+
+.turboreacteur:hover{
+	-webkit-animation: spin 2s linear infinite;
+    -moz-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    z-index: 1;
+}
+
+
+@-moz-keyframes spin{
+	100% {-moz-transform: rotate(-360deg);}
+}
+@-webkit-keyframes spin{
+	100% {-webkit-transform: rotate(-360deg);}
+}
+
+@keyframes spin {
+	100% {-webkit-transform: rotate(-360deg); transform: rotate(-360deg); }
+}
+
+#warped {z-index: 2;}
+
+video {position: relative;
+width: 100%}
+
+.exclamation:hover {
+	font-size: 300px;
+	transition: 2s;
+}
+
+.divlocalisation {
+	position: relative;
+font-size: 18px;
+left: -0.64%;
+z-index: -5;
+padding: 5px;
+border: solid 4px;
+border-color: darkgoldenrod;
+border-radius: 20px;
+background-color: #051039;
+width: 100%;
+height: 50%;
+padding-bottom: 10%;
+margin-top: 5%;
+}
+
+
+
+iframe.france {
+	position: relative;
+	left: 20px;
+	width: 50%;
+	top: 27px;
+}
+
+iframe.usa {
+	position: absolute;
+	left: 20px;
+	width: 50%;
+	top: 75px;
+}
+
+iframe.uae {
+	position: absolute;
+	left: 20px;
+	top: 75px;
+	width: 50%;
+}
+
+iframe.australie {
+	position: absolute;
+	left: 20px;
+	top: 75px;
+	width: 50%;
+}
+
+
+
+.d1{
+	width:40%;
+	padding-top: 30%;
+	margin: 50px auto;
+	box-shadow: 0px 0px 10px #777;
+	background-color: #051039;
+	background-size: contain;
+	animation: fondu 15s ease-in-out infinite both;
+	position: absolute;
+	right: 40px;
+	top: 44px;
+	text-align: right;
+}
+
+.d1:hover{
+	animation-play-state: paused;
+}
+
+
+@keyframes fondu {
+	0%{background-image: url("photoaeroport.jpg");}
+	33.33%{background-image: url("photoaeroport2.jpg");}
+	66.66%{background-image: url("photoaeroport3.jpg");}
+	100%{background-image: url("photoaeroport4.jpg");}
+}
+
+img.photoecole1{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 67%;
+}
+
+img.aeroportusa{position: relative;
+width: 40%;
+height: 450px;
+margin-left: auto;
+box-shadow: 0px 0px 10px #777;
+background-color: #051039;
+background-size: contain;
+left: 58.2%;
+top: 10px;}
+
+img.dxb{position: relative;
+width: 40%;
+height: 450px;
+margin-left: auto;
+box-shadow: 0px 0px 10px #777;
+background-color: #051039;
+background-size: contain;
+left: 58.2%;
+top: 10px;}
+
+img.sydney{position: relative;
+width: 40%;
+height: 450px;
+margin-left: auto;
+box-shadow: 0px 0px 10px #777;
+background-color: #051039;
+background-size: contain;
+left: 58.2%;
+top: 10px;}
+
+img.dassault {
+position: relative;
+left: 70%;
+width: 20%;
+height: 10%;
+top: -70px;
+}
+
+img.allosolar {position: relative;
+width: 20%;
+height: 10%;
+left: 70%;
+top: 65px;}
+
+img.aeroportnice{position: relative;
+width: 20%;
+height: 10%;
+left: 70%;
+top: -150px;}
+
+p.part1p {
+	border: outset 7px lightgray;
+	border-radius: 20px;
+	width: 50%;
+	padding: 2%;
+	margin-bottom: -5%;
+	display: block;
+	text-align: justify;
+}
+p.part2p{
+	border: outset 7px lightgray;
+	border-radius: 20px;
+	width: 50%;
+	padding: 2%;
+	margin-bottom: -5%;
+	display: block;
+	margin-bottom: -20%;
+	text-align: justify;
+}
+
+p.part3p{
+	border: outset 7px lightgray;
+	border-radius: 20px;
+	width: 50%;
+	padding: 2%;
+	display: block;
+	text-align: justify;
+}
+
+
+h4.hformulaire{position: relative;
+	text-align: center;
+	font-size: 33px;
+	top: 100px;
+}
+
+.formulaire {text-align: center;}
+
+.crédits {font-size: 18px;
+color: white;
+border-style: solid;
+background-color: #051039;
+width: 100%;
+height: 20%;
+text-align: center;
+padding-bottom: 10%;
+margin-top: 5%;}
+
+.gestion {
+	text-align: center;
+	font-size: 12px;
+	color: darkgray;
+	padding: 10px;
+}
+
+.Pti{
+    position:absolute;
+    z-index:5;
+    width:200px;
+    height:190px;
+    top:30%;
+    left:0%;
+}
+
+body.formulaire{background-color: lightgoldenrodyellow;}
+
+.formulaire1{text-align: center;
+}
+
+nav ul{
+    list-style-type:none;
+}
+
+nav ul li{
+    float:left;
+    width:32%;
+    text-align:center;
+    position:relative;
+}
+
+nav ul::after{
+    content:"";
+    display:table;
+    clear:both;
+}
+
+nav a{
+	top: -10px;
+    display:block;
+    text-decoration:none;
+    color:gray;
+}
+
+.link2{
+    display:none;
+    box-shadow:0px 1px 2px #CCC;
+    background-color:white;
+    position:absolute;
+    width:100%;
+    z-index:1000;
+}
+
+nav > ul li:hover .link2{
+    display:block;
+  
+}
+
+nav a:hover{
+    color:white;
+}
+
+.link2 li{
+    float:none;
+    width:100%;
+    text-align:left;
+}
+
+.link2 a{
+   padding:10px;
+}
+
+.link2 a:hover{
+    background-color:rgba(200,200,200,0.1);
+    color:black;
+}
+
+.link > a::after{
+    content:" ▼";
+    font-size:12px;
+}
+
+
+form{
+position: absolute;
+top: 36%;
+left: 1%;
+width: 95%;
+height: 60%;
+text-align: center;
+background-color: white;
+border: solid 20px #051039;
+border-radius: 10px;
+}
+
+.formbulle{left: 9%;
+width: 25%;
+height: 35%;}
+
+.psychomoteurs{position: relative;
+	top: 0px;
+	left: 15%;
+	border: solid 5px goldenrod;
+	border-radius: 10px;
+}
+
+.psychomoteurs2{position: relative;
+	top: 0px;
+	left: 25%;
+	border: solid 5px goldenrod;
+	border-radius: 10px;
+}
+
+.psychomoteurs3{position: relative;
+	top: 0px;
+	left: 35%;
+	border: solid 5px goldenrod;
+	border-radius: 10px;
+}
+
+.sim{
+position: relative;
+top: 0px;
+left: 30%;
+width: 40%;
+height: 10%;
+border: solid 5px goldenrod;
+	border-radius: 10px;
+}
+
+.petitavion{
+position: relative;
+top: 0px;
+left: 30%;
+width: 40%;
+height: 10%;
+border: solid 5px goldenrod;
+	border-radius: 10px;}
+
+.avionligne{
+position: relative;
+top: 0px;
+left: 30%;
+width: 40%;
+height: 10%;
+border: solid 5px goldenrod;
+	border-radius: 10px;
+}
+
+
+
+@media screen and (max-width: 640px){
+
+a.link {
+	text-decoration: none;
+	color: lightslategray;
+	margin: 30px;
+}
+
+a.link2 {
+	text-decoration: none;
+	color: lightslategray;
+	margin: 30px;
+}
+
+h1{
+	top: 225px;
+	right: 220px;
+}
+
+img.trait_gris {display: none;}
+
+form{
+position: absolute;
+top: 24%;
+left: 1%;
+width: 95%;
+height: 20%;
+text-align: center;
+background-color: white;
+border: solid 20px #051039;
+border-radius: 10px;
+}
+
+}
+
+
+@media screen and (min-width: 641px) and (max-width: 1000px){
+
+	form{
+position: absolute;
+top: 24%;
+left: 1%;
+width: 95%;
+height: 45%;
+text-align: center;
+background-color: white;
+border: solid 20px #051039;
+border-radius: 10px;
+}
+
+.formbulle{
+display: none;
+}
+
+.Pti{
+       display: none;
+}
+
+.d1{
+	width: 40%;
+	padding-top: 30%;
+	margin: 50px auto;
+	box-shadow: 0px 0px 10px #777;
+	background-color: #051039;
+	background-size: contain;
+	animation: fondu 15s ease-in-out infinite both;
+	position: absolute;
+	right: 40px;
+	top: 44px;
+	text-align: right;
+}
+
+img.aeroportusa{width: 45%;
+height: 450px;
+margin-left: auto;
+box-shadow: 0px 0px 10px #777;
+background-color: #051039;
+background-size: contain;
+left: 53%;
+top: 10px;}
+
+img.dxb{width: 70%;
+height: 450px;
+margin-left: auto;
+box-shadow: 0px 0px 10px #777;
+background-color: #051039;
+background-size: contain;
+left: 30%;
+top: 10px;}
+
+img.sydney{width: 60%;
+height: 450px;
+margin-left: auto;
+box-shadow: 0px 0px 10px #777;
+background-color: #051039;
+background-size: contain;
+left: 40%;
+top: 10px;}
+
+
+	.divlocalisation {
+	position: relative;
+font-size: 18px;
+left: -0.54%;
+z-index: -5;
+padding: 5px;
+border: solid 4px;
+border-color: darkgoldenrod;
+border-radius: 20px;
+background-color: #051039;
+width: 100%;
+height: 600px;
+padding-bottom: 10%;
+margin-top: 5%;
+}
+
+iframe.france {
+	position: relative;
+	left: 0px;
+	width: 50%;
+	height: 90%;
+	top: 27px;
+}
+
+iframe.usa {
+	position: absolute;
+	left: 0px;
+	width: 50%;
+	height: 80%;
+	top: 75px;
+}
+
+iframe.uae {
+	position: absolute;
+	left: 0px;
+	top: 75px;
+	width: 29%;
+	height: 80%;
+}
+
+iframe.australie {
+	position: absolute;
+	left: 0px;
+	top: 75px;
+	width: 38%;
+	height: 80%;
+}
+
+.psychomoteurs{position: relative;
+	top: 0px;
+	left: -30px;
+	border: solid 5px goldenrod;
+	border-radius: 10px;
+}
+
+.psychomoteurs2{position: relative;
+	top: 0px;
+	left: 3%;
+	border: solid 5px goldenrod;
+	border-radius: 10px;
+}
+
+.psychomoteurs3{position: relative;
+	top: 0px;
+	left: 8%;
+	border: solid 5px goldenrod;
+	border-radius: 10px;
+}
+
+
+img.appstore_logo{
+	position: relative;
+	top: -133px;
+	left: -80px;
+height: 33%;
+width: 33%;
+}
+
+img.googleplay_logo{
+	position: relative;
+	top: -210px;
+	left: -369px;
+height: 26%;
+width: 26%;
+}
+
+img.instagram_logo {
+position: relative;
+top: 35px;
+left: -50%;
+width: 10%;
+height: 10%;
+}
+
+img.twitter_logo {
+	position: relative;
+	top: 35px;
+	left: -50%;
+width: 10%;
+height: 10%;
+}
+
+img.linkedin_logo {
+	position: relative;
+	top: 35px;
+	left: -20%;
+width: 10%;
+height: 10%;
+}
+img.youtube_logo {
+	position: relative;
+	top: -65px;
+	left: 30%;
+width: 10%;
+height: 10%;
+}
+
+a.link {
+	text-decoration: none;
+	color: lightslategray;
+	margin: 7px;
+}
+
+a.link2 {
+	text-decoration: none;
+	color: lightslategray;
+	margin: 7px;
+}
+
+h1{
+	top: 225px;
+	right: 220px;
+}
+
+img.trait_gris {display: none;}
+
+}
+
+
+
+
+@media screen and (min-width: 1001px) and (max-width: 1301px){
+
+	form{
+position: absolute;
+top: 30%;
+left: 1%;
+width: 95%;
+height: 60%;
+text-align: center;
+background-color: white;
+border: solid 20px #051039;
+border-radius: 10px;
+}
+
+
+.Pti{
+    position:absolute;
+    z-index:5;
+    width:200px;
+    height:190px;
+    top:30%;
+    left:3%;
+}
+
+.formbulle{left: 8%;
+width: 25%;
+height: 35%;}
+
+	.psychomoteurs{position: relative;
+	top: 0px;
+	left: 0%;
+	border: solid 5px goldenrod;
+	border-radius: 10px;
+}
+
+.psychomoteurs2{position: relative;
+	top: 0px;
+	left: 6%;
+	border: solid 5px goldenrod;
+	border-radius: 10px;
+}
+
+.psychomoteurs3{position: relative;
+	top: 0px;
+	left: 13%;
+	border: solid 5px goldenrod;
+	border-radius: 10px;
+}
+
+	img.appstore_logo{
+	position: relative;
+	top: -103px;
+	left: -20%;
+height: 22.5%;
+width: 22.5%;
+}
+
+img.googleplay_logo{
+	position: relative;
+	top: -180px;
+	left: -40.5%;
+height: 18%;
+width: 18%;
+}
+
+h1{
+	top: 225px;
+	right: 190px;
+}
+
+a.link {
+	text-decoration: none;
+	color: lightslategray;
+	margin: 20px;
+}
+
+a.link2 {
+	text-decoration: none;
+	color: lightslategray;
+	margin: 20px;
+}
+
+img.trait_gris {display: none;}
+
+}
+
+img.programme {position: relative;
+top: 2px;
+left: 25%;
+height: 30%;
+width: 50%;
+}
+
+
+
+@media screen and (min-width: 1350px) and (max-width: 2559px){
+
+a.link {
+	text-decoration: none;
+	color: lightslategray;
+	margin: 20px;
+}
+
+a.link2 {
+	text-decoration: none;
+	color: lightslategray;
+	margin: 20px;
+}
+
+}
+
+@media screen and (min-width: 2560px){
+
+.d1{
+	width: 40%;
+	padding-top: 30%;
+	margin: 50px auto;
+	box-shadow: 0px 0px 10px #777;
+	background-color: #051039;
+	background-size: contain;
+	animation: fondu 15s ease-in-out infinite both;
+	position: absolute;
+	right: 40px;
+	top: -6%;
+	text-align: right;
+}
+
+img.aeroportusa{width: 30%;
+height: 450px;
+margin-left: auto;
+box-shadow: 0px 0px 10px #777;
+background-color: #051039;
+background-size: contain;
+left: 65%;
+top: 10px;}
+
+img.dxb{width: 30%;
+height: 450px;
+margin-left: auto;
+box-shadow: 0px 0px 10px #777;
+background-color: #051039;
+background-size: contain;
+left: 65%;
+top: 10px;}
+
+img.sydney{width: 30%;
+height: 450px;
+margin-left: auto;
+box-shadow: 0px 0px 10px #777;
+background-color: #051039;
+background-size: contain;
+left: 65%;
+top: 10px;}
+
+iframe.france {
+	position: relative;
+	left: 20px;
+	width: 55%;
+	top: 27px;
+}
+
+iframe.usa {
+	position: absolute;
+	left: 20px;
+	width: 55%;
+	top: 75px;
+}
+
+iframe.uae {
+	position: absolute;
+	left: 20px;
+	top: 75px;
+	width: 55%;
+}
+
+iframe.australie {
+	position: absolute;
+	left: 20px;
+	top: 75px;
+	width: 55%;
+}
+
+
+
+
+
+}
+
+
+
+
+
+
+

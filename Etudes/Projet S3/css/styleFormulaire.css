@@ -1,0 +1,11 @@
+/* styles formulaire */
+
+.formulaire div {
+  display: inline-block;
+  width: 50%;
+}
+
+.containerForm section {
+  display: flex;
+  width: 90%;
+}

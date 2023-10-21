@@ -1,0 +1,247 @@
+
+  <canvas id="gameCanvas" width="880" height="600"></canvas>
+  <button id="restartButton" style="display:none;">Relancer la partie</button>
+ <script>
+
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
+const restartButton = document.getElementById("restartButton");
+let gameRunning = true;
+
+let gameInterval;
+
+    function startGame() {
+      restartButton.style.display = "none";
+      player.x = canvas.width / 2;
+      player.y = canvas.height - 30;
+      player.dy = -20;
+      platforms = generatePlatforms(Math.floor(15 / 1.8)); // genere le nombre de plateforme, plus le diviseur sera eleve, moins il y aura de plateforme
+      scrollSpeed = 5;
+      score = 0;
+	  gameRunning = true;
+      if (!gameInterval) {
+        gameInterval = setInterval(updateGame, 1000 / 60); // 60 FPS
+      }
+    }
+
+// Initialise l'objet player avec ses propriétés
+const player = {
+  x: 0, // position horizontale initiale
+  y: 0, // position verticale initiale
+  width: 20, // largeur du joueur
+  height: 20, // hauteur du joueur
+  speed: 20, // vitesse de déplacement horizontale
+  dy: 0, // vitesse de déplacement verticale 
+  gravity: 0.5, // gravité appliquée au joueur
+  onPlatform: false, // détermine si le joueur est sur une plateforme
+  onGreenPlatform: false,
+};
+
+// Génère les plateformes en fonction du nombre souhaité (15 / 1.3)
+let platforms = 0;
+let powerUpDuration = 0;
+let powerUpActivated = false;
+let score = 0;
+
+// Fonction pour générer les plateformes
+function generatePlatforms(numberOfPlatforms) {
+  const platformArray = [
+    { x: 0, y: canvas.height - 10, width: canvas.width, height: 10, type: 'normal' },
+  ];
+
+  let lastY = canvas.height - 10;
+  for (let i = 1; i < numberOfPlatforms; i++) {
+    const x = Math.random() * (canvas.width - 100);
+    const y = lastY - 60 - Math.random() * 20;
+	const randomValue = Math.random();
+    const type = randomValue < 0.1 ? 'gray' : randomValue < 0.2 ? 'orange' : 'normal';
+
+    platformArray.push({ x, y, width: 100, height: 10, type });
+    lastY = y;
+  }
+
+  return platformArray;
+}
+
+// Définit la vitesse de défilement vertical du jeu
+let scrollSpeed = 0;
+
+// Fonction pour dessiner le joueur
+function drawPlayer() {
+  ctx.fillStyle = "blue";
+  ctx.fillRect(player.x, player.y, player.width, player.height);
+}
+
+// Fonction pour dessiner les plateformes
+function drawPlatforms() {
+  for (const platform of platforms) {
+    ctx.fillStyle = platform.type === 'gray' ? 'gray' : platform.type === 'orange' ? 'orange' : 'green';
+    ctx.fillRect(platform.x, platform.y, platform.width, platform.height);
+  }
+}
+// Fonction pour dessiner le score
+function drawScore() {
+  ctx.fillStyle = "white";
+  ctx.font = "24px Arial";
+  ctx.fillText(`Score: ${score}`, 10, 30);
+}
+
+
+
+// Fonction pour effacer le contenu du canvas
+function clearCanvas() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+// Fonction pour mettre à jour le jeu
+function updateGame() {
+	if (!gameRunning) {
+        return;
+      }
+	
+  clearCanvas();
+  drawPlatforms();
+  drawPlayer();
+  updatePlayerPosition();
+  scrollPlatforms();
+  drawScore();
+  
+  if (player.y + player.height >= canvas.height) {
+        gameOver();
+      }
+  
+		if (powerUpActivated) {
+    powerUpDuration--;
+    if (powerUpDuration <= 0) {
+      powerUpActivated = false;
+      scrollSpeed /= 2;
+      player.dy = -14.7;
+    }
+  }
+}
+
+// Fonction pour mettre à jour la position du joueur
+function updatePlayerPosition() {
+  player.y += player.dy;
+
+  if (player.y + player.height < canvas.height) {
+    player.dy += player.gravity;
+  } else {
+    player.y = canvas.height - player.height;
+    player.dy = 0;
+  }
+
+  if (player.onPlatform && !player.onGrayPlatform) {
+    player.dy = -14.7;
+  }
+
+  player.onPlatform = false;
+  player.onGrayPlatform = false;
+
+  for (const platform of platforms) {
+    if (
+      player.x < platform.x + platform.width &&
+      player.x + player.width > platform.x &&
+      player.y + player.height > platform.y &&
+      player.y + player.height < platform.y + platform.height + player.dy
+    ) {
+      player.onPlatform = true;
+      if (platform.type === 'gray') {
+        player.onGrayPlatform = true;
+      } else if (platform.type === 'orange' && !powerUpActivated) {
+        powerUpActivated = true;
+        powerUpDuration = 300; // 10 secondes à 60 FPS
+        scrollSpeed *= 2;
+        player.dy *= 2;
+       } else {
+        score++;
+      }
+    }
+  }
+}
+
+// Fonction pour faire défiler les plateformes
+function scrollPlatforms() {
+			// Dans cette partie nous allons essayer d'augmenter la difficulte en fonction du score que nous faisons
+			// plus le score est eleve, plus le scrollSpeed (vitesse d'affichage) va augmenter
+	 // Vérifie si le score est supérieur à 7
+  if (score >= 7) {
+    // Divise le nombre de plateformes par 1.5 et augmente la vitesse de défilement
+    scrollSpeed = 7;
+  }
+  
+  if (score >= 14) {
+    // Divise le nombre de plateformes par 1.5 et augmente la vitesse de défilement
+    scrollSpeed = 9;
+  }
+  
+  if (score >= 20) {
+    // Divise le nombre de plateformes par 1.5 et augmente la vitesse de défilement
+    scrollSpeed = 12;
+  }
+  
+  if (score >= 30) {
+    // Divise le nombre de plateformes par 1.5 et augmente la vitesse de défilement
+    scrollSpeed = 14;
+  }
+  
+  if (score >= 50) {
+    // Divise le nombre de plateformes par 1.5 et augmente la vitesse de défilement
+    scrollSpeed = 20;
+  }
+  
+  for (const platform of platforms) {
+    platform.y += scrollSpeed;
+  }
+  if (platforms[0].y > canvas.height) {
+    platforms.shift();
+    const newPlatform = {
+      x: Math.random() * (canvas.width - 100),
+      y: -10,
+      width: 100,
+      height: 10,
+      type: Math.random() < 0.1 ? 'gray' : 'normal',
+    };
+    platforms.push(newPlatform);
+  }
+}
+
+// Fonction pour déplacer le joueur en fonction des touches flèches
+function movePlayer(e) {
+  if (e.key === "ArrowLeft") {
+    player.x -= player.speed;
+    if (player.x < 0) {
+      player.x = canvas.width - player.width;
+    }
+  } else if (e.key === "ArrowRight") {
+    player.x += player.speed;
+    if (player.x > canvas.width - player.width) {
+      player.x = 0;
+    }
+  }
+}
+
+ function showGameOverScreen() {
+      ctx.fillStyle = "rgba(128, 128, 128, 0.5)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "black";
+      ctx.font = "24px Arial";
+      ctx.fillText("Game Over", canvas.width / 2 - 60, canvas.height / 2);
+    }
+
+ function gameOver() {
+	  gameRunning = false;
+      clearInterval(gameInterval);
+      gameInterval = null;
+      showGameOverScreen();
+      restartButton.style.display = "block";
+    }
+
+
+document.addEventListener("keydown", movePlayer);
+restartButton.addEventListener("click", startGame);
+startGame();
+
+
+</script>

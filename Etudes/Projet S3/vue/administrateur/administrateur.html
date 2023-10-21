@@ -1,0 +1,90 @@
+<section class="containerForm">
+    <div class="formulaire">
+        <h1>Ajouter un document</h1>
+        <form method="post" action="index.php">
+            <input type="hidden" name="form" value="addDoc" />
+            <div>
+                <label for="titre">titre du document</label>
+                <input type="text" name="titre" placeholder="titre">
+            </div>
+            <div>
+                <label for="date">date de parution annee-mois-jour</label>
+                <input type="text" name="date" placeholder="date de parution">
+            </div>
+            <div>
+                <label for="couverture">lien de la couverture</label>
+                <input type="text" name="couverture" placeholder="lien de la couverture">
+            </div>
+            <div>
+                <label for="type">choisir un type de Document</label>
+                <select name="type" id="typeDoc">
+                    <option value="1">1 - Encyclopedie</option>
+                    <option value="2">2 - Roman</option>
+                    <option value="3">3 - Theatre</option>
+                    <option value="4">4 - Film</option>
+                    <option value="5">5 - Poeme</option>
+                    <option value="6">6 - Bande-Dessinee</option>
+                </select>
+            </div>
+            <div>
+                <label for="langue">choisir la langue du document</label>
+                <select name="langue" id="langueDoc">
+                    <option value="1">1 - Anglais</option>
+                    <option value="2">2 - Francais</option>
+                    <option value="3">3 - Espagnol</option>
+                    <option value="4">4 - Portugais</option>
+                    <option value="5">5 - Italien</option>
+                    <option value="6">6 - Arabe</option>
+                    <option value="7">7 - Chinois</option>
+                    <option value="8">8 - Russe</option>
+                    <option value="9">9 - Japonais</option>
+                    <option value="10">10 - Allemand</option>
+                </select>
+            </div>
+            <div>
+                <label for="genre">choisir le genre du document</label>
+                <select name="genre" id="genreDoc">
+                    <option value="1">1 - Science-fiction</option>
+                    <option value="2">2 - Thriller</option>
+                    <option value="3">3 - Romance</option>
+                    <option value="4">4 - Horreur</option>
+                    <option value="5">5 - Fantastique</option>
+                    <option value="6">6 - Policier</option>
+                    <option value="7">7 - Aventure</option>
+                    <option value="8">8 - Comedie</option>
+                    <option value="9">9 - Drame</option>
+                    <option value="10">10 - Historique</option>
+                    <option value="11">11 - Education</option>
+                </select>
+            </div>
+            <div>
+                <label for="description">choisir la description du document</label>
+                <textarea name="description" id="descriptionDoc" cols="30" rows="10"></textarea>
+            </div>
+            <button type="submit">Creer le document</button>
+        </form>
+    </div>
+    <div class="formulaire">
+        <h1>Supprimer un document</h1>
+        <form method="post" action="index.php">
+            <input type="hidden" name="form" value="suppDoc"/>
+            <div>
+                <label for="id">identifiant du document</label>
+                <input type="text" name="idDoc" placeholder="identifiant">
+            </div>
+            <button type="submit">Supprimer le document</button>
+        </form>
+    </div>
+    <div class="formulaire">
+        <h1>Supprimer un utilisateur</h1>
+        <form method="post" action="index.php">
+            <input type="hidden" name="form" value="suppUtil"/>
+            <div>
+                <label for="idUtil">identifiant de l'utilisateur</label>
+                <input type="text" name="idUtil" placeholder="identifiant">
+            </div>
+            <button type="submit">Supprimer l'utilisateur</button>
+        </form>
+    </div>
+</section>
+

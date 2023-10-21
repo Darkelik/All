@@ -1,0 +1,213 @@
+<script>
+    var tk;
+    var colorIndex = 0;
+    var colors = [];
+    var color;
+    var firstColor;
+    var firstElement;
+    var x = 0;
+    var stockagecolors = [];
+    var fin;
+
+    function shuffle(array) { // permet de mélanger les couleurs du tableau
+        var currentIndex = array.length, temporaryValue, randomIndex;
+
+        while (0 !== currentIndex) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+
+        return array;
+    }
+
+    function begins() {
+        clearTimeout(tk);
+        firstColor = null;
+        firstElement = null;
+        x = 0;
+        document.getElementById("b2").value = "on";
+        document.getElementById("b2").innerHTML = "rejouer";
+        document.getElementById("times").innerHTML = "time:60";
+        document.getElementById("scores").innerHTML = "scores:0";
+
+        for (var i = 3; i < 33; i++) {
+            document.getElementById("d" + i).style.backgroundColor = "";
+            document.getElementById("d" + i).style.border.opacity = "1";
+            document.getElementById("d" + i).setAttribute("fini", "false");
+        }
+
+        colors = ["red", "red", "green", "green", "yellow", "yellow", "blue", "blue", "orange", "orange", "pink", "pink", "purple", "purple", "brown", "brown", "olive", "olive", "lightseagreen", "lightseagreen", "springgreen", "springgreen", "gray", "gray", "navy", "navy", "black", "black", "aqua", "aqua"];
+        colors = shuffle(colors);
+        for (var i = 0; i < 33; i++) {
+            stockagecolors[i] = "";
+        }
+    }
+
+    function time_counts() {
+        var time = parseInt(document.getElementById("times").innerHTML.slice(5)) - 1;
+        if (time >= 0) {
+            document.getElementById("times").innerHTML = "time:" + time;
+
+        } else {
+            clearTimeout(tk);
+            document.getElementById("b2").value = "off";
+            document.getElementById("b2").innerHTML = "rejouer";
+            for (var i = 3; i < 33; i++) {
+                document.getElementById("d" + i).setAttribute("fini", "true");
+            }
+        }
+        tk = setTimeout(time_counts, 1000);
+    }
+
+    function change_color(obj) {
+        if (obj.getAttribute("fini") === "true") {
+            return;
+        }
+        if (x % 2 == 0) {
+            firstColor = null;
+            firstElement = null;
+        }
+
+        if (obj.style.backgroundColor !== "" && obj.style.backgroundColor !== "white") {
+            return;
+        }
+
+
+        var idNum = parseInt(obj.id.slice(1));
+        if (stockagecolors[idNum] !== "") {
+            obj.style.backgroundColor = stockagecolors[idNum];
+        }
+        else {
+            obj.style.backgroundColor = colors[colorIndex];
+            colorIndex = (colorIndex + 1) % colors.length;
+            stockagecolors[idNum] = obj.style.backgroundColor;
+        }
+
+        x += 1;
+        obj.style.opacity = "1";
+    }
+
+    function sleep(delay) {
+        var start = (new Date()).getTime();
+        while ((new Date()).getTime() - start < delay) {
+            continue;
+        }
+    }
+
+    function match_color2(obj) {
+        if (document.getElementById("b2").value == "on" && obj.style.backgroundColor == "white") {
+            obj.style.backgroundColor = colors[colorIndex];
+            colorIndex = (colorIndex + 1) % colors.length;
+
+            var idNum = parseInt(obj.id.slice(1));
+            if (stockagecolors[idNum] === "") {
+                obj.style.backgroundColor = stockagecolors[idNum];
+            }
+        }
+
+        for (var i = 3; i < 33; i++) {
+            if (document.getElementById("d" + i).style.backgroundColor != "") {
+                if (firstColor == null) {
+                    firstColor = obj.style.backgroundColor;
+                    firstElement = obj;
+                } else {
+                    if (firstColor == obj.style.backgroundColor && firstElement != obj) {
+                        var scores = parseInt(document.getElementById("scores").innerHTML.slice(7)) + 10;
+                        document.getElementById("scores").innerHTML = "scores:" + scores;
+                        firstElement.onmousedown = null;
+                        firstElement.onmouseup = null;
+                        obj.onmousedown = null;
+                        obj.onmouseup = null;
+                        break;
+                    }
+                    else if (firstElement == obj) {
+                        return;
+                    }
+                    else {
+                        for (var j = 3; j < 33; j++) {
+                            if (document.getElementById("d" + j) == firstElement) {
+                                stockagecolors[j] = firstColor;
+                            }
+                            if (document.getElementById("d" + j) == obj) {
+                                stockagecolors[j] = obj.style.backgroundColor;
+                            }
+                            setTimeout(function () {
+                                resetcolor(firstElement, obj);
+                            }, 10)
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    function resetcolor(obj1, obj2) {
+        obj1.style.backgroundColor = "white";
+        obj2.style.backgroundColor = "white";
+    }
+
+</script>
+<style>
+
+    #d1 {
+        height: 755px;
+        width: 1020px;
+        border: solid 1px;
+        margin: auto;
+        padding: 0;
+        text-align: center;
+    }
+
+    div#d1 > div {
+        height: 250px;
+        width: 100px;
+        margin: 0;
+        padding: 0;
+        float: left;
+        border: solid 1px;
+    }
+</style>
+<p id="times">time:60</p>
+<p id="scores">scores:0</p>
+<div id="d1">
+    <div id="d3" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d4" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d5" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d6" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d7" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d8" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d9" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d10" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d11" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d12" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d13" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d14" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d15" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d16" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d17" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d18" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d19" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d20" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d21" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d22" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d23" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d24" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d25" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d26" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d27" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d28" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d29" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d30" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d31" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+    <div id="d32" class="case" onmousedown="change_color(this)" onmouseup="match_color2(this)"></div>
+</div>
+
+<div id="d2">
+    <p id="p1"></p>
+    <button type="button" id="b2" onmousedown="begins()" onmouseup="time_counts()" value="off">jouer</button>
+</div>

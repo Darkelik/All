@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;io.troof.bigpi.controller.MailController.java&apos; to &apos;EmailController.java&apos;&#x0D;&#x0A;- Original project: &apos;mail-sender&apos;&#x0D;&#x0A;- Original element: &apos;io.troof.bigpi.controller.MailController.java&apos;&#x0D;&#x0A;- Renamed element: &apos;io.troof.bigpi.controller.EmailController.java&apos;" description="Rename compilation unit &apos;MailController.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;io.troof.bigpi.controller{MailController.java" name="EmailController.java" references="false" stamp="1682689410881" version="1.0"/>
+</session>
