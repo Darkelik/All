@@ -1,5 +1,0 @@
-package io.troof.bigpi.emailsenderui.repository;
-
-public interface ConnectionRepository {
-
-}

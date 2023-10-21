@@ -1,5 +1,0 @@
-package io.troof.bigpi.emailsenderui.service.impl;
-
-public class ConnectionServiceImpl {
-
-}

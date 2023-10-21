@@ -1,5 +1,0 @@
-package io.troof.bigpi.HelloUserOpenAPI.controller;
-
-public class ControllerHello {
-
-}

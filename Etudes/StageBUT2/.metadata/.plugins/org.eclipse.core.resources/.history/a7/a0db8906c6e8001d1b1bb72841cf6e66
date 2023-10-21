@@ -1,5 +1,0 @@
-package io.troof.bigpi.config;
-
-public class EmailConfig {
-
-}
